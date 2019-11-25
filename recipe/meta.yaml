@@ -1,5 +1,5 @@
 {% set name = "tty-reader" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 769124c3321f6e2ee5674b8925880ad65751ba49edafbd79275ba1825e3c0b09
+  sha256: 2407d5c55585e9eab311a6d7f436edb80dc361a0c6558c116a90779db454e7a4
 
 build:
   noarch: generic
