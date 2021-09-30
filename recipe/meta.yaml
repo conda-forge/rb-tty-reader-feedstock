@@ -1,5 +1,5 @@
 {% set name = "tty-reader" %}
-{% set version = "0.7.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 2407d5c55585e9eab311a6d7f436edb80dc361a0c6558c116a90779db454e7a4
+  sha256: c62972c985c0b1566f0e56743b6a7882f979d3dc32ff491ed490a076f899c2b1
 
 build:
   noarch: generic
   number: 0
   script:
-    - gem install --norc -l -V --ignore-dependencies {{ name }}-{{ version }}.gem
+    - gem install -N -l -V --norc --ignore-dependencies -n $PREFIX/bin {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
   skip: {{ win }}
 
@@ -21,7 +21,7 @@ requirements:
   host:
     - ruby >=2.0.0
   run:
-    - ruby >=2.0.0
+    - {{ pin_compatible('ruby', max_pin='x.x') }}
     - rb-tty-cursor >=0.7,<1.0
     - rb-tty-screen >=0.7,<1.0
     - rb-wisper >=2.0.0,<2.1.0
@@ -42,6 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - sodre
-    - rluria14
-    - benhuff
-    - oblute
+    - mxr-conda
