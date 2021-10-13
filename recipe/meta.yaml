@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - {{ pin_compatible('ruby', max_pin='x.x') }}
+    - ruby >=2.5,<2.7
   run:
     - {{ pin_compatible('ruby', max_pin='x.x') }}
-    - rb-tty-cursor >=0.7,<1.0
-    - rb-tty-screen >=0.7,<1.0
-    - rb-wisper >=2.0.0,<2.1.0
+    - rb-tty-cursor >=0.7
+    - rb-tty-screen >=0.8
+    - rb-wisper >=2.0.0
 
 test:
   commands:
