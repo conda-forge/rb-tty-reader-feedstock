@@ -21,7 +21,7 @@ requirements:
   host:
     - ruby >=2.5
   run:
-    - {{ pin_compatible('ruby', max_pin='x.x') }}
+    - ruby >=2.5
     - rb-tty-cursor >=0.7
     - rb-tty-screen >=0.8
     - rb-wisper >=2.0
