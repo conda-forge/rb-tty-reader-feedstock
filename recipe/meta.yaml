@@ -1,5 +1,5 @@
 {% set name = "tty-reader" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 2407d5c55585e9eab311a6d7f436edb80dc361a0c6558c116a90779db454e7a4
+  sha256: 1934cd1abb8fadd7f31d2ff1861128c43dadf42dd69f54ee93521cde16a6191d
 
 build:
   noarch: generic
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: {{ name }}-{{ version }}/LICENSE.txt
-  summary: 'A set of methods for processing keyboard input in character, line and multiline modes. It maintains history of entered input with an ability to recall and re-edit those inputs. It lets you register to listen for keystroke events and trigger custom key events yourself.'
+  summary: A set of methods for processing keyboard input in character, line and multiline modes. It maintains history of entered input with an ability to recall and re-edit those inputs. It lets you register to listen for keystroke events and trigger custom key events yourself.
   doc_url: https://www.rubydoc.info/gems/{{ name }}
   dev_url: https://github.com/piotrmurach/tty-reader
 
